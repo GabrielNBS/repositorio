@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Telefonica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/281e9d8d50.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+    <header>
+            <i class="fa-regular fa-address-book"></i>
+            <h1>Lista Telefonica</h1>
+    </header>
+    <form id="form-contato">
+        <div class="inputGroup1">
+            <input id="nome-contato" type="text"  placeholder=""  autocomplete="none" required >
+            <label for="nome-contato" class="labelNome" >Nome</label>
+        </div>
+        <div class="inputGroup2">
+            <input id="contato-cell" minlength="9"  maxlength="16"  autocomplete="none" type="tel" placeholder="" required>
+            <label for="contato-cell" class="labelContato" >Celular</label>    
+        </div>
+        <button type="submit">Adicionar</button>
+        <span id="contador-contatos">0 contatos</span>
+    </form>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

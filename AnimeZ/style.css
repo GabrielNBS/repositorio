@@ -1,0 +1,109 @@
+body {
+    background-color: #070303;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    padding-top: 110px;
+    z-index: 1;
+}
+
+h1 {
+    
+    animation: hueRotate 7s alternate infinite;
+    background-image: linear-gradient(to right, #0000ff, #11c799);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+@keyframes hueRotate {
+    0%{
+        filter: hue-rotate(279deg);
+    }
+    50%{
+        filter: hue-rotate(197deg);
+    }
+    100%{
+        filter: hue-rotate(12deg);
+    }
+}
+
+header {
+    position: sticky;
+    left: 0;
+    top: 0;
+    background-color: #1f1f3d;
+    z-index: 2;
+    margin-bottom: 45px;
+    padding: 16px;
+}
+
+.container > h2 {
+    border-bottom: 3px solid #fff;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+
+.navbar-nav .nav-link.active {
+    color: #000;
+    background-color: #fff;
+}
+
+.nav-link {
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+}
+
+.nav-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    background-color: #ececec;
+}
+
+.imghw {
+    height: 650px;
+    border-radius: 10px;
+}
+
+.card img {
+    height: 591px;
+}
+
+#animes .card,
+#animes .card-header {
+    background-color: #101265;
+}
+
+.card-header,
+.card {
+    text-align: center;
+    background-color: #a32b2b;
+    font-weight: bold;
+    color: #fff;
+}
+
+.card {
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.card:hover {
+    opacity: 0.9;
+}
+
+.carousel-caption {
+    opacity: 0.5;
+}
+
+.carousel-indicators [data-bs-target] {
+    height: 5px;
+    width: 50px;
+}

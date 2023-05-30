@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto A - Animes e Mangás</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1>Projeto A</h1>
+                <!-- Button com class "navbar-toggler" juntamente com o span com class "navbar-toggler-icon" formam o menu de 'hambúrguer' normalmente utilizado no responsivo para dispositivos móveis  -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"> 
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- A class "colapse" pode alternar a visibilidade do conteúdo, o uso da classe juntamente com o elemento que receber o atributo data-bs-toggle="collapse e data-bs-targe="id do elemento"  -->
+                <nav id="menu" class="collapse navbar-collapse justify-content-end">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#lancamento">Lançamento</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#animes">Animes</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div id="container-carousel" class="container">
+        <!-- A propriedade data-bs-ride="carousel" é usada para ativar o recurso de carrossel (carousel) do Bootstrap. Essa propriedade indica que o elemento em questão deve ser tratado como um carrossel e permite que você defina outras opções relacionadas a ele. -->
+        <div id="carousel-principal" class="carousel carousel-fade slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- A propriedade data-bs-interval="" permite selecionar em milissegundos o tempo de transição entre as imagens do carousel  -->
+                <div data-bs-interval="4000" class="carousel-item active">
+                    <img class="d-block w-100 imghw" src="./img/Demon Slayer carousel.jpg" alt="Demon Slayer Poster">
+                </div>
+                <div data-bs-interval="4000" class="carousel-item">
+                    <img class="d-block w-100 imghw" src="./img/Blue Lock carousel.png" alt="Blue Lock Poster">
+                </div>
+                <div data-bs-interval="4000" class="carousel-item">
+                    <img class="d-block w-100 imghw" src="./img/Vinland Saga carousel.jpg" alt="Vinland Saga Poster">
+                </div>
+                <div data-bs-interval="4000" class="carousel-item">
+                    <img class="d-block w-100 imghw" src="./img/Boruto carousel.jpg" alt="Boruto Poster">
+                </div>
+            </div>
+            <button data-bs-target="#carousel-principal" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button data-bs-target="#carousel-principal" data-bs-slide="next" class="carousel-control-next" type="button">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button class="active" type="button" data-bs-target="#carousel-principal" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#carousel-principal" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-principal" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carousel-principal" data-bs-slide-to="3"></button>
+            </div>
+    </div>
+</div>
+
+    <div data-bs-spy="scroll" data-bs-target="cabecalho">
+        <section id="lancamento">
+            <div class="container">
+                <h2>Lançamentos</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <a class="card" href="#" target="_blank">
+                            <div class="card-header">
+                                <h2>Novos Episodios </h2>
+                            </div>
+                            <img src="./img/Demon Slayer Poster.jpg" alt="Demon Slayer Poster">
+                            <div class="card-body">
+                                <h4 class="card-title">Demons Slayer Swordsmith Village</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <a class="card" href="#" target="_blank">
+                            <div class="card-header">
+                                <h2>Novos Episodios </h2>
+                            </div>
+                            <img src="./img/Vinland Saga_Poster.webp" alt="Vinland Saga Poster">
+                            <div class="card-body">
+                                <h4 class="card-title">Vinland Saga Season 2</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <a class="card" href="#" target="_blank">
+                            <div class="card-header">
+                                <h2>Novos Episodios </h2>
+                            </div>
+                            <img src="./img/Atack on Titan Poster.jpg" alt="Atack on Titan Poster">
+                            <div class="card-body">
+                                <h4 class="card-title">Atack on Titan Final Season</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <a class="card" href="#" target="_blank">
+                            <div class="card-header">
+                                <h2>Novos Episodios </h2>
+                            </div>
+                            <img src="./img/Boku no Hero Poster.jpg" alt="Boku no Hero Poster">
+                            <div class="card-body">
+                                <h4 class="card-title">Boku No Hero Academia</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <a class="card" href="#" target="_blank">
+                            <div class="card-header">
+                                <h2>Novos Episodios </h2>
+                            </div>
+                            <img src="./img/One Piece Poster.jpg" alt="One Piece Poster">
+                            <div class="card-body">
+                                <h4 class="card-title">One Piece</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <a class="card" href="#" target="_blank">
+                            <div class="card-header">
+                                <h2>Novos Episodios </h2>
+                            </div>
+                            <img src="./img/𝘉𝘭𝘶𝘦 𝘭𝘰𝘤𝘬 Poster.jpg" alt="Blue Lock Poster">
+                            <div class="card-body">
+                                <h4 class="card-title">Blue Lock</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="animes">
+            <div class="container">
+                <h2>Animes</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <a class="card" href="#" target="_blank">
+                            <div class="card-header">
+                                <h2>Novos Episodios </h2>
+                            </div>
+                            <img src="./img/Baki Poster.jpg" alt="Baki Poster">
+                            <div class="card-body">
+                                <h4 class="card-title">Baki</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <a class="card" href="#" target="_blank">
+                            <div class="card-header">
+                                <h2>Novos Episodios </h2>
+                            </div>
+                            <img src="./img/Another Poster.jpg" alt="Another Poster">
+                            <div class="card-body">
+                                <h4 class="card-title">Another</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <a class="card" href="#" target="_blank">
+                            <div class="card-header">
+                                <h2>Novos Episodios </h2>
+                            </div>
+                            <img src="./img/Blue Exorcist Poster.jpg" alt="Blue Exorcist Poster">
+                            <div class="card-body">
+                                <h4 class="card-title">Blue Exorcist</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <a class="card" href="#" target="_blank">
+                            <div class="card-header">
+                                <h2>Novos Episodios </h2>
+                            </div>
+                            <img src="./img/Bungou Stray Dogs Poster.png" alt="Bungou Stray Dogs Posterr">
+                            <div class="card-body">
+                                <h4 class="card-title">Bungou Stray Dogs</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <a class="card" href="#" target="_blank">
+                            <div class="card-header">
+                                <h2>Novos Episodios </h2>
+                            </div>
+                            <img src="./img/Dragon Ball Super Poster.jpg" alt="Dragon Ball Super Poster">
+                            <div class="card-body">
+                                <h4 class="card-title">Dragon Ball Super</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <a class="card" href="#" target="_blank">
+                            <div class="card-header">
+                                <h2>Novos Episodios </h2>
+                            </div>
+                            <img src="./img/HXH Poster.jpg" alt="HxH Poster">
+                            <div class="card-body">
+                                <h4 class="card-title">Hunter X Hunter</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
