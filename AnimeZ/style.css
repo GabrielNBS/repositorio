@@ -41,6 +41,10 @@ header {
     padding: 16px;
 }
 
+#animes h2 {
+    color: transparent;
+}
+
 .container > h2 {
     border-bottom: 3px solid #fff;
     font-weight: bold;
