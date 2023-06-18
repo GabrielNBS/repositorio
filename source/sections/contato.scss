@@ -1,0 +1,94 @@
+@use '../config/variaveis';
+
+@mixin formModel () {
+    height: 40px;
+    border: none;
+    outline: none;
+    margin-bottom: 25px;
+}
+
+#contato {
+        background-color: variaveis.$corSecundaria;
+        color: #fff;
+
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 48%);
+        column-gap: 2%;
+        padding-top: 40px;
+
+        h2 {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        form {
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+
+            label {
+                font-weight: bold;
+
+                span {
+                    color: #ff0000;
+                    margin-left: 2px;
+                }
+            }
+
+            input {
+                @include formModel();
+                border-bottom: 2px solid #000;
+                transition: .2s ease;
+
+                &::placeholder {
+                    padding-left: 5px;
+                }
+
+                &:focus {
+                    border-bottom: 4px solid variaveis.$corSecundaria;
+                }
+            }
+
+            button {
+                @include formModel();
+                font-size: 1em;
+                background-color: variaveis.$corSuccess;
+                color: #fff;
+            }
+        }
+
+        .social-links {
+        
+            h2 {
+                text-align: center;
+                padding-bottom: 30px;
+            }
+
+            ul {
+                display: flex;
+                justify-content: center;
+
+                li {
+                    display: inline;
+                    list-style: none;
+                    margin-left: 30px;
+    
+                    a {
+                        text-decoration: none;
+    
+                        i {
+                            font-size: 2em;
+                            color: darken(#fff, 10%);
+
+                            &:hover {
+                                color: lighten(variaveis.$corPrimaria, 20%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

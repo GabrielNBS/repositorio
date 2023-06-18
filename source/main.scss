@@ -1,0 +1,44 @@
+@use './config/reset';
+@use './config/variaveis';
+@use './sections/espaço';
+@use './sections/produtos';
+@use './sections/contato';
+@use './config/portabilidade';
+
+.container {
+    display: flex;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: variaveis.$corPrimaria;
+    color: #fff;
+    padding: 15px 0;
+
+    .container {
+        justify-content: space-between;
+        align-items: center;
+
+        .menu {
+            display: inline-flex;
+            gap: 25px;
+
+            li {
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    padding-bottom: 5px;
+
+                    &:hover {
+                        color: darken(#fff, 10%);
+                        border-bottom: 2px solid darken(#fff, 10%);
+                    }
+                }
+            }
+        }
+    }
+}

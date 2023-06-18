@@ -1,0 +1,55 @@
+@media screen and (max-width: 764px){
+    header {
+    
+        h1 {
+            font-size: 1.2em;
+        }
+
+        nav {
+            font-size: 0.8em;
+        }
+    
+    }
+
+    #espaco {
+            
+        .container {
+            display: block;
+            width: 90%;
+
+            .espaco-text {
+                
+                p {
+                    font-size: 1em;
+                }
+
+                h2 {
+                    padding-top: 20px;
+                    font-size: 2em;
+                }
+                
+            }
+        }
+    }
+
+    #produtos {
+        
+        .container {
+            width: 90%;
+
+            .itens {
+                display: block;
+            }
+        }
+    }
+
+    #contato {
+
+        .container {
+            width: 90%;
+            display: block;
+            padding-bottom: 15px;
+        }
+    }
+}
+

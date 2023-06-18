@@ -1,3 +1,232 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
 
+#espaco {
+  display: flex;
+  background-color: #40407a;
+  align-items: center;
+}
+#espaco .container {
+  display: grid;
+  grid-template-columns: repeat(2, 48%);
+  column-gap: 2%;
+  padding: 50px 0;
+}
+#espaco .container .espaco-img {
+  overflow: hidden;
+}
+#espaco .container .espaco-img img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 20%;
+}
+#espaco .container .espaco-text {
+  text-align: center;
+  color: #fff;
+}
+#espaco .container .espaco-text p {
+  font-size: 1.5em;
+}
+#espaco .container .espaco-text h2 {
+  margin-bottom: 25px;
+  font-size: 2.5em;
+}
+
+#produtos {
+  display: flex;
+  padding: 30px 0;
+}
+#produtos .container {
+  align-items: center;
+}
+#produtos .container h2 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+#produtos .container .itens {
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  column-gap: 2%;
+}
+#produtos .container .itens .card {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  overflow: hidden;
+  margin-bottom: 35px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+#produtos .container .itens .card img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+#produtos .container .itens .card h5 {
+  font-size: 1em;
+}
+#produtos .container .itens .card p, #produtos .container .itens .card h5, #produtos .container .itens .card span {
+  margin: 10px;
+}
+#produtos .container .itens .card span {
+  font-weight: bold;
+}
+#produtos .container .itens .card button {
+  max-width: 200px;
+  width: 100%;
+  padding: 6px;
+  margin: 10px auto;
+  background-color: #218c74;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+#produtos .container .itens .card button:hover {
+  background-color: #2bb596;
+}
+
+#contato {
+  background-color: #40407a;
+  color: #fff;
+}
+#contato .container {
+  display: grid;
+  grid-template-columns: repeat(2, 48%);
+  column-gap: 2%;
+  padding-top: 40px;
+}
+#contato .container h2 {
+  text-align: center;
+  padding-bottom: 30px;
+}
+#contato .container form {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+#contato .container form label {
+  font-weight: bold;
+}
+#contato .container form label span {
+  color: #ff0000;
+  margin-left: 2px;
+}
+#contato .container form input {
+  height: 40px;
+  border: none;
+  outline: none;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #000;
+  transition: 0.2s ease;
+}
+#contato .container form input::placeholder {
+  padding-left: 5px;
+}
+#contato .container form input:focus {
+  border-bottom: 4px solid #40407a;
+}
+#contato .container form button {
+  height: 40px;
+  border: none;
+  outline: none;
+  margin-bottom: 25px;
+  font-size: 1em;
+  background-color: #218c74;
+  color: #fff;
+}
+#contato .container .social-links h2 {
+  text-align: center;
+  padding-bottom: 30px;
+}
+#contato .container .social-links ul {
+  display: flex;
+  justify-content: center;
+}
+#contato .container .social-links ul li {
+  display: inline;
+  list-style: none;
+  margin-left: 30px;
+}
+#contato .container .social-links ul li a {
+  text-decoration: none;
+}
+#contato .container .social-links ul li a i {
+  font-size: 2em;
+  color: #e6e6e6;
+}
+#contato .container .social-links ul li a i:hover {
+  color: #7b7bb9;
+}
+
+@media screen and (max-width: 764px) {
+  header h1 {
+    font-size: 1.2em;
+  }
+  header nav {
+    font-size: 0.8em;
+  }
+  #espaco .container {
+    display: block;
+    width: 90%;
+  }
+  #espaco .container .espaco-text p {
+    font-size: 1em;
+  }
+  #espaco .container .espaco-text h2 {
+    padding-top: 20px;
+    font-size: 2em;
+  }
+  #produtos .container {
+    width: 90%;
+  }
+  #produtos .container .itens {
+    display: block;
+  }
+  #contato .container {
+    width: 90%;
+    display: block;
+    padding-bottom: 15px;
+  }
+}
+.container {
+  display: flex;
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #474787;
+  color: #fff;
+  padding: 15px 0;
+}
+header .container {
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .menu {
+  display: inline-flex;
+  gap: 25px;
+}
+header .container .menu li {
+  list-style: none;
+}
+header .container .menu li a {
+  text-decoration: none;
+  color: #fff;
+  padding-bottom: 5px;
+}
+header .container .menu li a:hover {
+  color: #e6e6e6;
+  border-bottom: 2px solid #e6e6e6;
+}
 
 /*# sourceMappingURL=main.css.map */
