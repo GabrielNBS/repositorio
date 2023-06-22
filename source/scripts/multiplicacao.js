@@ -1,4 +1,4 @@
-function multiplicar(a, b) {
+function multiplicar(a, b, c) {
     return a * b;
 }
 
