@@ -1,0 +1,27 @@
+.scrolling {
+    background-color: aqua;
+}
+
+body {
+    height: 200vh;
+}
+
+
+header {
+    .navbar-brand {
+        color: #fff;
+    }
+
+    #navbar-menu {
+
+        .nav-link {
+            color: #fff;
+            transition: all ease .3s;
+    
+            &.active {
+                background-color: #fff;
+                color: black;
+            }
+        }
+    }  
+}
