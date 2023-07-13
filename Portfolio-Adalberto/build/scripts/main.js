@@ -1,1 +1,0 @@
-function ಠ_ಠ79(){const e=document.getElementsByTagName("header")[0];window.addEventListener("scroll",function(){0<window.scrollY?e.classList.add("scrolling"):e.classList.remove("scrolling")})}ಠ_ಠ79();
