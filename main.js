@@ -73,6 +73,10 @@ gabriel.aumento();
 gabrielly.aumento();
 ariane.aumento();
 
+
+console.log(gabriel);
+console.log(gabrielly);
+console.log(ariane);
 console.log(gabriel.getSalario().toFixed(2));
 console.log(gabrielly.getSalario().toFixed(2));
 console.log(ariane.getSalario().toFixed(2));
