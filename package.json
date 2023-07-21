@@ -1,5 +1,7 @@
 {
   "devDependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.22.9",
     "parcel": "^2.9.3"
   }
 }
