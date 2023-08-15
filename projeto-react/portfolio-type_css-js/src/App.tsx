@@ -1,24 +1,31 @@
-import logo from './logo.svg'
-import './App.css'
+import { ThemeProvider } from 'styled-components'
+
+import GlobalStyle, { Container } from './styles'
+import Sidebar from './Containers/Sidebar'
+import Sobre from './Containers/Sobre'
+import Projetos from './Containers/Projetos'
+import temaLight from './themes/light'
+import temaDark from './themes/dark'
+import { useState } from 'react'
 
 function App() {
+  const [isDarkTheme, setIsDarktheme] = useState(false)
+
+  function trocaTema() {
+    setIsDarktheme(!isDarkTheme)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={isDarkTheme ? temaDark : temaLight}>
+      <GlobalStyle />
+      <Container>
+        <Sidebar trocaTema={trocaTema} />
+        <main>
+          <Sobre />
+          <Projetos />
+        </main>
+      </Container>
+    </ThemeProvider>
   )
 }
 
