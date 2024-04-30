@@ -1,22 +1,33 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
-
-import { ButtonLink } from '../Button/styles'
+import { BreakPoint, colors } from '../../styles'
 
 export const PlatesContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 64px 0 120px;
   gap: 32px;
+
+  @media (max-width: ${BreakPoint.tablet}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: ${BreakPoint.mobile}) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `
 
 export const Card = styled.div`
-  background-color: ${cores.vermelho};
+  background-color: ${colors.red};
   display: flex;
+  max-width: 320px;
   flex-direction: column;
   align-items: center;
   padding: 8px;
   justify-content: space-between;
+
+  @media (max-width: ${BreakPoint.tablet}) {
+    margin: 0 auto 40px;
+  }
 `
 
 export const Img = styled.img`
@@ -28,7 +39,7 @@ export const NamePlate = styled.h3`
   font-size: 16px;
   font-weight: 900;
   line-height: 18.75px;
-  color: ${cores.branco};
+  color: ${colors.white};
   align-self: flex-start;
   padding: 8px 0;
 `
@@ -36,7 +47,7 @@ export const NamePlate = styled.h3`
 export const Description = styled.p`
   line-height: 22px;
   font-size: 14px;
-  color: ${cores.branco};
+  color: ${colors.white};
   padding-bottom: 8px;
 `
 export const ModalContainer = styled.div`
@@ -71,10 +82,17 @@ export const ModalContent = styled.div`
   display: flex;
   width: 100%;
   height: 344px;
-  background-color: ${cores.vermelho};
+  background-color: ${colors.red};
   padding: 32px;
   z-index: 1;
   position: relative;
+
+  @media (max-width: ${BreakPoint.mobile}) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+  }
 
   img {
     display: block;
@@ -82,6 +100,13 @@ export const ModalContent = styled.div`
     height: 280px;
     margin-right: 24px;
     object-fit: cover;
+
+    @media (max-width: ${BreakPoint.mobile}) {
+      width: 150px;
+      height: 150px;
+      margin: 0;
+      border-radius: 8px;
+    }
   }
 
   > button {
@@ -99,12 +124,16 @@ export const ModalContent = styled.div`
 `
 
 export const ModalInfos = styled.div`
-  color: ${cores.brancoPuro};
+  color: ${colors.pureWhite};
 
   h2 {
     font-size: 18px;
     font-weight: 900;
     line-height: 21.09px;
+
+    @media (max-width: ${BreakPoint.mobile}) {
+      margin: 8px 0;
+    }
   }
 
   p {
@@ -120,7 +149,7 @@ export const ModalInfos = styled.div`
   }
 
   button {
-    color: ${cores.vermelho};
-    background-color: ${cores.branco};
+    color: ${colors.red};
+    background-color: ${colors.white};
   }
 `

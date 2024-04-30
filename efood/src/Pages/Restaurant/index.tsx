@@ -4,6 +4,7 @@ import { useGetTypeQuery } from '../../services/api'
 import Banner from '../../Components/Banner'
 import Header from '../../Components/Header'
 import Plates from '../../Components/Plates'
+import Loader from '../../Components/Loader'
 
 const Restaurant: React.FC = () => {
   const { id } = useParams<{ id: string }>()
@@ -15,24 +16,27 @@ const Restaurant: React.FC = () => {
   }
 
   if (isLoading) {
-    return <div>Carregando...</div>
+    return <Loader />
   }
 
   if (!selectedRestaurant) {
     return <div>Restaurante não encontrado</div>
   }
 
-  const { titulo, tipo, capa, cardapio } = selectedRestaurant
+  const {
+    titulo: title,
+    tipo: type,
+    capa: banner,
+    cardapio: menu,
+  } = selectedRestaurant
 
-  const plates: MenuItem[] = cardapio || []
-
-  const restaurantType = tipo.length > 1 ? tipo[1] : tipo[0]
+  const plates: MenuItem[] = menu || []
 
   return (
     <>
       <Header restaurantStyle />
-      <Banner local={restaurantType} name={titulo} photo={capa} />
-      <Plates cardapio={plates} />
+      <Banner local={type} name={title} photo={banner} />
+      <Plates menu={plates} />
     </>
   )
 }

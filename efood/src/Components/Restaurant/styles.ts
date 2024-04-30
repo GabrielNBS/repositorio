@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 import { TagContainer } from '../Tag/styles'
-import { cores } from '../../styles'
+import { BreakPoint, colors } from '../../styles'
 import { ButtonLink } from '../Button/styles'
 
 export const Card = styled.div`
   position: relative;
   max-width: 472px;
-  background-color: ${cores.brancoPuro};
-  border: 1px solid ${cores.vermelho};
+  width: 100%;
+  background-color: ${colors.pureWhite};
+  border: 1px solid ${colors.red};
 
   ${TagContainer} {
     margin-right: 16px;
@@ -22,6 +23,10 @@ export const Card = styled.div`
     width: 100%;
     height: 217px;
   }
+
+  @media (max-width: ${BreakPoint.mobile}) {
+    margin: 0 0 40px;
+  }
 `
 
 export const Infos = styled.div`
@@ -30,32 +35,32 @@ export const Infos = styled.div`
   right: 16px;
 `
 
-export const Titulo = styled.h2`
-  color: ${cores.vermelho};
+export const Title = styled.h2`
+  color: ${colors.red};
   font-size: 18px;
   font-weight: 700;
 `
 
-export const Paragrafo = styled.p`
-  color: ${cores.vermelho};
+export const Paragraph = styled.p`
+  color: ${colors.red};
   font-size: 14px;
   line-height: 22px;
   margin: 16px 8px;
 `
-export const Restaurante = styled.div`
+export const Restaurant = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 8px 8px 0;
 `
 
-export const Avaliacoes = styled.div`
+export const Reviews = styled.div`
   display: flex;
   align-items: center;
 
   span {
     font-size: 18px;
     font-weight: 700;
-    color: ${cores.vermelho};
+    color: ${colors.red};
     margin-right: 8px;
   }
 `

@@ -7,10 +7,10 @@ import { add, open } from '../../store/reducers/cart'
 import { formatPrice } from '../../utils'
 
 type PlatesProps = {
-  cardapio: MenuItem[]
+  menu: MenuItem[]
 }
 
-const Plates: React.FC<PlatesProps> = ({ cardapio }) => {
+const Plates: React.FC<PlatesProps> = ({ menu }) => {
   const [selectedPlate, setSelectedPlate] = useState<MenuItem | null>(null)
 
   const handlePlateClick = (plate: MenuItem) => {
@@ -32,7 +32,7 @@ const Plates: React.FC<PlatesProps> = ({ cardapio }) => {
   return (
     <>
       <S.PlatesContainer className="container">
-        {cardapio.map((item, index) => (
+        {menu.map((item, index) => (
           <S.Card key={index}>
             <S.Img src={item.foto} alt={`imagem de uma ${item.nome}`} />
             <S.NamePlate>{item.nome}</S.NamePlate>
@@ -41,7 +41,7 @@ const Plates: React.FC<PlatesProps> = ({ cardapio }) => {
               type="button"
               onClick={() => handlePlateClick(item)}
               title="Adicionar ao carrinho"
-              custom="secundary"
+              custom="secondary"
             >
               Adicionar ao carrinho
             </Button>

@@ -1,4 +1,4 @@
-import { Img, Local, TItulo } from './styles'
+import * as S from './styles'
 
 type Props = {
   local: string
@@ -6,11 +6,15 @@ type Props = {
   photo: string
 }
 
+const capitalizeFirstLetter = (str: string) => {
+  return str.charAt(0).toUpperCase() + str.slice(1)
+}
+
 const Banner = ({ local, name, photo }: Props) => (
-  <Img style={{ backgroundImage: `url(${photo})` }}>
-    <Local>{local}</Local>
-    <TItulo>{name}</TItulo>
-  </Img>
+  <S.Img style={{ backgroundImage: `url(${photo})` }}>
+    <S.Local>{capitalizeFirstLetter(local)}</S.Local>
+    <S.Title>{name}</S.Title>
+  </S.Img>
 )
 
 export default Banner

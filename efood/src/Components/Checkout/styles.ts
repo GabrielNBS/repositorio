@@ -1,13 +1,13 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 
-type Props = {
+export type Props = {
   maxWidth?: string
 }
 
 export const CheckoutContainer = styled.div`
   font-size: 16px;
-  color: ${cores.branco};
+  color: ${colors.white};
 
   form {
     h2 {
@@ -16,7 +16,6 @@ export const CheckoutContainer = styled.div`
     }
   }
 `
-
 export const InputGroup = styled.div<Props>`
   max-width: ${(props) => props.maxWidth || 'auto'};
   width: 100%;
@@ -28,10 +27,43 @@ export const InputGroup = styled.div<Props>`
 
   input {
     display: block;
-    border: none;
+    border: transparent;
     height: 32px;
     margin-top: 8px;
     width: 100%;
+    padding: 0 8px;
+
+    &.error {
+      border: 2px solid ${colors.black};
+      animation: shake 1s ease-in-out;
+
+      @keyframes shake {
+        0% {
+          transform: translate3d(1px, 0, 0);
+        }
+        10% {
+          transform: translate3d(-1px, 0, 0);
+        }
+        20% {
+          transform: translate3d(1px, 0, 0);
+        }
+        30% {
+          transform: translate3d(-1px, 0, 0);
+        }
+        40% {
+          transform: translate3d(1px, 0, 0);
+        }
+        50% {
+          transform: translate3d(-1px, 0, 0);
+        }
+        60% {
+          transform: translate3d(1px, 0, 0);
+        }
+        70% {
+          transform: translate3d(-1px, 0, 0);
+        }
+      }
+    }
   }
 `
 
@@ -46,6 +78,7 @@ export const HalfWidth = styled.div`
     }
   }
 `
+
 export const Row = styled.div<Props>`
   display: flex;
   justify-content: space-between;
@@ -57,5 +90,25 @@ export const ButtonGroup = styled.div`
   button {
     margin-bottom: 8px;
     padding: 4px 0;
+  }
+`
+
+export const OrderContainer = styled.div`
+  line-height: 22px;
+
+  div {
+    margin: 16px 0;
+    flex-direction: column;
+    display: flex;
+    gap: 16px;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
   }
 `
